@@ -24,9 +24,9 @@ describe('DELETE Booking', () => {
                 token = response.body.token
                 cy.log("Your token is: "+ token)
             });            
-    }); 
+    });  
 
-    it('Valida exclusao de reserva - 201', () => {        
+    it('Valida exclusao de reserva - 201', () => {      
             cy.request({
                         method: 'DELETE',
                         url: 'https://restful-booker.herokuapp.com/booking/1',
@@ -49,10 +49,6 @@ describe('DELETE Booking', () => {
                         url: 'https://restful-booker.herokuapp.com/booking/1',
                         }).then((response)=>{
                             expect(response.status).to.equal(404);
-            })
+            });
     }); 
-
-    
-
-
-});            
+});
