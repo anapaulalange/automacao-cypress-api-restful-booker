@@ -1,6 +1,7 @@
 /// <reference types="cypress" />
 
-let token 
+let token
+let bookId
 
 describe('PATCH Booking', () => {
            
