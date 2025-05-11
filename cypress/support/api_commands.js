@@ -1,3 +1,15 @@
+// const faker = require('faker');
+// const client = [];
+
+// for (let index = 0; index < 10; index++) {
+//     const firstname = faker.firstname.findName();
+// }
+
+// client = {
+//     firstname
+// }
+// cy.log(fistname)
+
 Cypress.Commands.add('api_booking_autenticacao', (username,password) => {
     cy.request({
                 method: 'POST',

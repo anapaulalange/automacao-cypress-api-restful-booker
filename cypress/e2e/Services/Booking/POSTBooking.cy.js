@@ -1,7 +1,6 @@
 /// <reference types="cypress" />
 
 const payloadAddBooking = require('../../../fixtures/add-booking.json')
-
 let bookId;
 
 describe('POST Booking', () => {
