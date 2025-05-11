@@ -56,6 +56,37 @@ describe('PATCH Booking', () => {
                 })
         });  
 
+    // atualiza datas da reserva    
+    it('Valida cenario de alteracao de datas da reserva por id', () => {   
+
+                cy.request({
+                            method: 'PATCH',
+                            failOnStatusCode: false,
+                            url: 'https://restful-booker.herokuapp.com/booking/1',
+                            headers: {
+                            'content-type': 'application/json',
+                            'accept' : 'application/json',
+                            'cookie' : `token=${token}`
+                            },
+                            body: {
+                                "bookingdates.checkin" : "2025-05-09",
+                                "bookingdates.checkout" : "2025-05-11"
+                            },
+                }).then((response)=>{
+                    expect(response.status).to.equal(200);
+                    expect(response.body).to.be.not.null;
+                    expect(response.status).to.equal(200);
+                    expect(response.body).to.be.not.null;
+                    expect(response.body).to.be.an("object");
+                    expect(response.body.firstname).to.be.an("string");
+                    expect(response.body.lastname).to.be.an("string");
+                    expect(response.body.totalprice).to.be.an("number");
+                    expect(response.body.depositpaid).to.be.an("boolean");
+                    expect(response.body.bookingdates.checkin[0]).to.be.an("string");
+                    expect(response.body.bookingdates.checkout[1]).to.be.an("string");
+                })
+        });    
+
     it('Valida cenario status code 403', () => {
             
             cy.request({

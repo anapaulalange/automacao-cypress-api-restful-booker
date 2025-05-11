@@ -8,6 +8,10 @@ describe('POST Booking', () => {
         it('Valida cenário de inclusão de nova reserva', () => {
             cy.api_inclusao(payloadAddBooking).then((response)=>{
                 expect(response.status).to.equal(200);
+                expect(response.body).exist;
+                expect(response.body.booking.firstname).exist;
+                expect(response.body.booking.bookingdates.checkin[0]).exist;
+                expect(response.body.booking.bookingdates.checkout[1]).exist;
                 expect(response.body).to.be.not.null;
                 expect(response.body).to.be.an("object");
                 expect(response.body.bookingid).to.be.an("number");
@@ -42,6 +46,5 @@ describe('POST Booking', () => {
                 expect(response.status).to.equal(404);
             });    
         });    
-
     });            
  

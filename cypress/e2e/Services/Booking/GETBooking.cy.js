@@ -24,7 +24,7 @@ describe('GET Booking', () => {
             })  
         });
 
-        it('Valida consulta de reservas por id', () => {   
+        it('Valida consulta de reservas por id', () => {  
             cy.request({
                         method: 'GET',
                         failOnStatusCode: false,
