@@ -7,23 +7,10 @@ const payloadAddBooking = require('../../../fixtures/add-booking.json')
 describe('DELETE Booking', () => {
 
     it('Geração do Token', () => {
-            cy.request({
-                method: 'POST',
-                url: 'https://restful-booker.herokuapp.com/auth',
-                body: {
-                        "username" : "admin",
-                        "password" : "password123"
-                    
-                },
-                failOnStatusCode: false
-            }).then((response)=>{
-                expect(response.status).to.equal(200);
-                expect(response.body).to.be.not.null;
-                expect(response.body.token).to.be.an("string");
-                
+            cy.api_booking_autenticacao('admin','password123').then((response) => {
                 token = response.body.token
                 cy.log("Your token is: "+ token)
-            });            
+            }); 
     }); 
 
     it('Valida cenário de inclusão de nova reserva', () => {

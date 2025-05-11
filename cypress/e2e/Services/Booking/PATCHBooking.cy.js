@@ -7,20 +7,7 @@ let bookId
 describe('PATCH Booking', () => {
            
     it('Geração do Token', () => {
-            cy.request({
-                method: 'POST',
-                url: 'https://restful-booker.herokuapp.com/auth',
-                body: {
-                        "username" : "admin",
-                        "password" : "password123"
-                    
-                },
-                failOnStatusCode: false
-            }).then((response)=>{
-                expect(response.status).to.equal(200);
-                expect(response.body).to.be.not.null;
-                expect(response.body.token).to.be.an("string");
-                
+            cy.api_booking_autenticacao('admin','password123').then((response) => {
                 token = response.body.token
                 cy.log("Your token is: "+ token)
             });            
@@ -80,7 +67,7 @@ describe('PATCH Booking', () => {
                 cy.request({
                             method: 'PATCH',
                             failOnStatusCode: false,
-                            url: 'https://restful-booker.herokuapp.com/booking/1',
+                            url: 'https://restful-booker.herokuapp.com/booking/'+bookId,
                             headers: {
                             'content-type': 'application/json',
                             'accept' : 'application/json',
