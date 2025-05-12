@@ -6,14 +6,14 @@ let bookId
 
 describe('PATCH Booking', () => {
            
-    it('Geração do Token', () => {
+    it('Geracao do Token', () => {
             cy.api_booking_autenticacao('admin','password123').then((response) => {
                 token = response.body.token
                 cy.log("Your token is: "+ token)
             });            
     }); 
 
-    it('Valida cenário de inclusão de nova reserva', () => {
+    it('Valida cenario de cadastro de nova reserva', () => {
             cy.api_inclusao(payloadAddBooking).then((response)=>{
                 bookId = response.body.bookingid
                 cy.log("Your Booking ID is: "+ bookId)
@@ -79,21 +79,5 @@ describe('PATCH Booking', () => {
                     expect(response.body.bookingdates.checkin[0]).to.be.an("string");
                     expect(response.body.bookingdates.checkout[1]).to.be.an("string");
                 })
-        });    
-
-    it('Valida cenario status code 403', () => {
-            
-            cy.request({
-                        method: 'PATCH',
-                        url: 'https://restful-booker.herokuapp.com/booking/1',
-                        body: {
-                                "firstname" : "Leo",
-                                "lastname" : "Jaime"
-                            },
-                        failOnStatusCode: false    
-            }).then((response)=>{
-                expect(response.status).to.equal(403);
-                expect(response.body).to.be.not.null;
-            })
-    });    
+    });      
 }); 

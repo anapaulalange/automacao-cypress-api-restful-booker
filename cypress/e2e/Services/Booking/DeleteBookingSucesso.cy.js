@@ -6,14 +6,14 @@ const payloadAddBooking = require('../../../fixtures/add-booking.json')
 
 describe('DELETE Booking', () => {
 
-    it('Geração do Token', () => {
+    it('Geracao do Token', () => {
             cy.api_booking_autenticacao('admin','password123').then((response) => {
                 token = response.body.token
                 cy.log("Your token is: "+ token)
             }); 
     }); 
 
-    it('Valida cenário de inclusão de nova reserva', () => {
+    it('Valida cenário de cadastro de nova reserva', () => {
             cy.api_inclusao(payloadAddBooking).then((response)=>{
                 bookId = response.body.bookingid
                 cy.log("Your Booking ID is: "+ bookId)

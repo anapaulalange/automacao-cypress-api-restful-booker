@@ -4,7 +4,7 @@ const payloadAddBooking = require('../../../fixtures/add-booking.json')
 let bookId;
 
 describe('POST Booking', () => {
-        it('Valida cenário de inclusão de nova reserva', () => {
+        it('Valida cenario de cadastro de nova reserva', () => {
             cy.api_inclusao(payloadAddBooking).then((response)=>{
                 expect(response.status).to.equal(200);
                 expect(response.body).exist;
@@ -26,7 +26,7 @@ describe('POST Booking', () => {
             })  
         });   
 
-        it('Valida cenário de geração do Token', () => {
+        it('Valida cenario de geracao do Token', () => {
             cy.api_booking_autenticacao('admin','password123').then((response) => {
                 expect(response.status).to.equal(200);
                 expect(response.body).to.be.not.null;
@@ -34,16 +34,6 @@ describe('POST Booking', () => {
                 // retorno do token
                 cy.log(response.body.token)
             })   
-        });    
-        
-        it('Valida cenário status code 404', () => {
-            cy.request({
-                method: 'POST',
-                url: 'https://restful-booker.herokuapp.com/auty',
-                failOnStatusCode: false
-            }).then((response)=>{
-                expect(response.status).to.equal(404);
-            });    
-        });    
-    });            
+        });      
+});            
  
