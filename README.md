@@ -27,6 +27,7 @@ npm install
 Ou, se você usa Yarn:
 
 #yarn install
+
 Isso criará a pasta node_modules/.
 
  .gitignore (Garantindo a Segurança): Certifique-se de que seu arquivo .gitignore (também na raiz do projeto) contenha as seguintes linhas para evitar que o .env e outras pastas geradas sejam enviados para o GitHub:
