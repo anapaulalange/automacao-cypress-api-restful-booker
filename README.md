@@ -10,7 +10,7 @@ npm / Yarn: Gerenciadores de pacotes para o Node.js.
 🛠️ Pré-requisitos
 Antes de começar, certifique-se de ter instalado em sua máquina:
 
-Node.js: Versão 14 ou superior (recomendado instalar via nvm ou Node.js.org).
+Node.js: Versão 12 ou superior (recomendado instalar via nvm ou Node.js.org).
 npm (gerenciador de pacotes do Node.js, geralmente vem com o Node.js) ou Yarn.
 
 ⚙️ Configuração do Ambiente
@@ -26,7 +26,7 @@ npm install
 
 Ou, se você usa Yarn:
 
-#yarn install
+yarn install
 
 Isso criará a pasta node_modules/.
 
