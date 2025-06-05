@@ -1,18 +1,20 @@
-🚀 Automação de Testes de API para a API Restful com Cypress
+🚀 # Automação de Testes de API para a API Restful com Cypress
 Este projeto tem como objetivo demonstrar a automação de testes de API para a API Restful, utilizando o framework Cypress. Os testes cobrem funcionalidades essenciais como cadastro ee consulta de reserva por id, atualização e deleção de reserva.
 URL da API utilizada: https://restful-booker.herokuapp.com/
 
-💻 Tecnologias Utilizadas
+💻 # Tecnologias Utilizadas
 Cypress: Framework de automação de testes para web e API.
 Node.js: Ambiente de execução JavaScript (necessário para o Cypress e npm).
 npm / Yarn: Gerenciadores de pacotes para o Node.js.
 
-🛠️ Pré-requisitos
+🛠️ # Pré-requisitos
 Antes de começar, certifique-se de ter instalado em sua máquina:
 
 Node.js: Versão 14 ou superior (recomendado instalar via nvm ou Node.js.org).
 npm (gerenciador de pacotes do Node.js, geralmente vem com o Node.js) ou Yarn.
-⚙️ Configuração do Ambiente
+
+⚙️ # Configuração do Ambiente
+
 Siga os passos abaixo para configurar o projeto em sua máquina:
 
 Clone o Repositório: Abra seu terminal ou prompt de comando e execute:
@@ -22,7 +24,8 @@ Instale as Dependências: Na pasta raiz do projeto, instale todas as dependênci
 
 npm install
 # Ou, se você usa Yarn:
-# yarn install
+
+#yarn install
 Isso criará a pasta node_modules/.
 
  .gitignore (Garantindo a Segurança): Certifique-se de que seu arquivo .gitignore (também na raiz do projeto) contenha as seguintes linhas para evitar que o .env e outras pastas geradas sejam enviados para o GitHub:
