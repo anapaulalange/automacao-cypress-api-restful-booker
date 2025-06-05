@@ -49,4 +49,4 @@ npx cypress run
 Os resultados serão exibidos no terminal.
 
 🙋‍♂️ Autor
-Ana Paula Gomes 
+Ana Paula Lange/ @anapaulalange
