@@ -1,5 +1,5 @@
-🚀 Automação de Testes de API para a API Restful com Cypress
-Este projeto tem como objetivo demonstrar a automação de testes de API para a API Restful, utilizando o framework Cypress. Os testes cobrem funcionalidades essenciais como cadastro ee consulta de reserva por id, atualização e deleção de reserva.
+# Automação de Testes de API para a API Restful com Cypress
+🚀 Este projeto tem como objetivo demonstrar a automação de testes de API para a API Restful, utilizando o framework Cypress. Os testes cobrem funcionalidades essenciais como cadastro ee consulta de reserva por id, atualização e deleção de reserva.
 URL da API utilizada: https://restful-booker.herokuapp.com/
 
 💻 Tecnologias Utilizadas
@@ -50,6 +50,7 @@ Ao abrir, clique no arquivo de teste (board_management.cy.js ou card_management.
 Modo Headless (Terminal): Este modo executa os testes diretamente no terminal, sem abrir a interface gráfica. É ideal para integração contínua (CI/CD).
 
 npx cypress run
+
 Os resultados serão exibidos no terminal.
 
 
